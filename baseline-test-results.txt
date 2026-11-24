@@ -1,0 +1,15 @@
+BASELINE TEST RESULT
+
+Configuration: default analysis.py signal window (3 usable monthly BAA observations)
+Commands:
+  .venv/bin/python analysis.py
+  .venv/bin/python -m pytest -q
+
+Observed result:
+  Wrote visible_output.json
+  Wrote stress_output.json
+  10 passed in 0.75s
+
+Baseline output artifacts:
+  evidence/changed-input-record/baseline-visible_output.json
+  evidence/changed-input-record/baseline-stress_output.json
