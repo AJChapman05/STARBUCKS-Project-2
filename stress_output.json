@@ -1,0 +1,676 @@
+{
+  "as_of": "2026-10-02",
+  "base_configuration_preserved": true,
+  "disclosure": "Stress runs are analysis scenarios, not the Locked Changed-Input Record. The approved base configuration remains unchanged.",
+  "stop_condition": {
+    "condition": "Stop implementation whenever any mandatory mandate rule is FAIL or NOT TESTABLE.",
+    "reason": "The mandate requires compliance before adoption. Current base output has NOT TESTABLE borrowing, turnover, and S9 calendar-year-loss checks; S4 and S10 remain unresolved committee decisions.",
+    "status": "STOP"
+  },
+  "stresses": [
+    {
+      "base": {
+        "mandate_checks": {
+          "borrowing": {
+            "reason": "Portfolio weights cannot establish whether the investor borrowed externally; committee evidence is required.",
+            "status": "NOT TESTABLE"
+          },
+          "calendar_year_loss": {
+            "reason": "S9 lacks a risk measure, test method, and breach procedure.",
+            "status": "NOT TESTABLE"
+          },
+          "derivatives": {
+            "reason": "All selected Lab 13 holdings are labeled non-derivative.",
+            "status": "PASS"
+          },
+          "issuer": {
+            "reason": "Acme stock plus bonds = 0.0%; maximum is 8.0%.",
+            "status": "PASS"
+          },
+          "liquidity": {
+            "reason": "100.0% redeemable within 5 business days versus 90.0% required.",
+            "status": "PASS"
+          },
+          "long_only": {
+            "reason": "Lowest weight is 0.0%; no short sales.",
+            "status": "PASS"
+          },
+          "reserve": {
+            "reason": "14.0% reserve-eligible versus 3.0% required for four $0.75m distributions on $100m.",
+            "status": "PASS"
+          },
+          "turnover": {
+            "reason": "No prior approved portfolio was supplied.",
+            "status": "NOT TESTABLE"
+          },
+          "weights_sum": {
+            "reason": "100.0%; mandate requires 100.0%.",
+            "status": "PASS"
+          }
+        },
+        "name": "Approved base constrained portfolio",
+        "planning_metrics": {
+          "gross_expected_return": 0.0667,
+          "reason": "Course planning inputs; Cash is proxied by Treasury bills. Net objective cannot be assessed because no cost input is supplied.",
+          "status": "PLANNING ESTIMATE",
+          "volatility": 0.10148
+        },
+        "weights": {
+          "Acme Corp bonds": 0.0,
+          "Acme Corp stock": 0.0,
+          "Cash": 0.02,
+          "Global equity index fund": 0.6,
+          "Investment-grade bond fund": 0.26,
+          "Private real estate fund": 0.0,
+          "Treasury 10-year note": 0.1,
+          "Treasury bills": 0.02
+        }
+      },
+      "description": "Student stress assumption: reduce each available course planning expected return by 100 bps. The course did not supply an alternate estimate set; this is a sensitivity assumption, not a sourced forecast.",
+      "mandate_base": {
+        "FAIL": [],
+        "NOT TESTABLE": [
+          "borrowing",
+          "turnover",
+          "calendar_year_loss"
+        ],
+        "PASS": [
+          "weights_sum",
+          "long_only",
+          "reserve",
+          "liquidity",
+          "issuer",
+          "derivatives"
+        ]
+      },
+      "mandate_stressed": {
+        "FAIL": [],
+        "NOT TESTABLE": [
+          "borrowing",
+          "turnover",
+          "calendar_year_loss"
+        ],
+        "PASS": [
+          "weights_sum",
+          "long_only",
+          "reserve",
+          "liquidity",
+          "issuer",
+          "derivatives"
+        ]
+      },
+      "name": "Estimate downshift",
+      "stop_condition": null,
+      "stressed": {
+        "mandate_checks": {
+          "borrowing": {
+            "reason": "Portfolio weights cannot establish whether the investor borrowed externally; committee evidence is required.",
+            "status": "NOT TESTABLE"
+          },
+          "calendar_year_loss": {
+            "reason": "S9 lacks a risk measure, test method, and breach procedure.",
+            "status": "NOT TESTABLE"
+          },
+          "derivatives": {
+            "reason": "All selected Lab 13 holdings are labeled non-derivative.",
+            "status": "PASS"
+          },
+          "issuer": {
+            "reason": "Acme stock plus bonds = 0.0%; maximum is 8.0%.",
+            "status": "PASS"
+          },
+          "liquidity": {
+            "reason": "100.0% redeemable within 5 business days versus 90.0% required.",
+            "status": "PASS"
+          },
+          "long_only": {
+            "reason": "Lowest weight is 0.0%; no short sales.",
+            "status": "PASS"
+          },
+          "reserve": {
+            "reason": "14.0% reserve-eligible versus 3.0% required for four $0.75m distributions on $100m.",
+            "status": "PASS"
+          },
+          "turnover": {
+            "reason": "No prior approved portfolio was supplied.",
+            "status": "NOT TESTABLE"
+          },
+          "weights_sum": {
+            "reason": "100.0%; mandate requires 100.0%.",
+            "status": "PASS"
+          }
+        },
+        "name": "Estimate stress",
+        "planning_metrics": {
+          "gross_expected_return": 0.0567,
+          "reason": "Course planning inputs; Cash is proxied by Treasury bills. Net objective cannot be assessed because no cost input is supplied.",
+          "status": "PLANNING ESTIMATE",
+          "volatility": 0.10148
+        },
+        "weights": {
+          "Acme Corp bonds": 0.0,
+          "Acme Corp stock": 0.0,
+          "Cash": 0.02,
+          "Global equity index fund": 0.6,
+          "Investment-grade bond fund": 0.26,
+          "Private real estate fund": 0.0,
+          "Treasury 10-year note": 0.1,
+          "Treasury bills": 0.02
+        }
+      },
+      "weight_change": {
+        "Acme Corp bonds": 0.0,
+        "Acme Corp stock": 0.0,
+        "Cash": 0.0,
+        "Global equity index fund": 0.0,
+        "Investment-grade bond fund": 0.0,
+        "Private real estate fund": 0.0,
+        "Treasury 10-year note": 0.0,
+        "Treasury bills": 0.0
+      }
+    },
+    {
+      "base": {
+        "mandate_checks": {
+          "borrowing": {
+            "reason": "Portfolio weights cannot establish whether the investor borrowed externally; committee evidence is required.",
+            "status": "NOT TESTABLE"
+          },
+          "calendar_year_loss": {
+            "reason": "S9 lacks a risk measure, test method, and breach procedure.",
+            "status": "NOT TESTABLE"
+          },
+          "derivatives": {
+            "reason": "All selected Lab 13 holdings are labeled non-derivative.",
+            "status": "PASS"
+          },
+          "issuer": {
+            "reason": "Acme stock plus bonds = 0.0%; maximum is 8.0%.",
+            "status": "PASS"
+          },
+          "liquidity": {
+            "reason": "100.0% redeemable within 5 business days versus 90.0% required.",
+            "status": "PASS"
+          },
+          "long_only": {
+            "reason": "Lowest weight is 0.0%; no short sales.",
+            "status": "PASS"
+          },
+          "reserve": {
+            "reason": "14.0% reserve-eligible versus 3.0% required for four $0.75m distributions on $100m.",
+            "status": "PASS"
+          },
+          "turnover": {
+            "reason": "No prior approved portfolio was supplied.",
+            "status": "NOT TESTABLE"
+          },
+          "weights_sum": {
+            "reason": "100.0%; mandate requires 100.0%.",
+            "status": "PASS"
+          }
+        },
+        "name": "Approved base constrained portfolio",
+        "planning_metrics": {
+          "gross_expected_return": 0.0667,
+          "reason": "Course planning inputs; Cash is proxied by Treasury bills. Net objective cannot be assessed because no cost input is supplied.",
+          "status": "PLANNING ESTIMATE",
+          "volatility": 0.10148
+        },
+        "weights": {
+          "Acme Corp bonds": 0.0,
+          "Acme Corp stock": 0.0,
+          "Cash": 0.02,
+          "Global equity index fund": 0.6,
+          "Investment-grade bond fund": 0.26,
+          "Private real estate fund": 0.0,
+          "Treasury 10-year note": 0.1,
+          "Treasury bills": 0.02
+        }
+      },
+      "description": "Use the last two usable BAA observations (2026-08-01 and 2026-09-01) instead of all three. Both are available before the decision date.",
+      "mandate_base": {
+        "FAIL": [],
+        "NOT TESTABLE": [
+          "borrowing",
+          "turnover",
+          "calendar_year_loss"
+        ],
+        "PASS": [
+          "weights_sum",
+          "long_only",
+          "reserve",
+          "liquidity",
+          "issuer",
+          "derivatives"
+        ]
+      },
+      "mandate_stressed": {
+        "FAIL": [],
+        "NOT TESTABLE": [
+          "borrowing",
+          "turnover",
+          "calendar_year_loss"
+        ],
+        "PASS": [
+          "weights_sum",
+          "long_only",
+          "reserve",
+          "liquidity",
+          "issuer",
+          "derivatives"
+        ]
+      },
+      "name": "Shorter historical window",
+      "stop_condition": null,
+      "stressed": {
+        "mandate_checks": {
+          "borrowing": {
+            "reason": "Portfolio weights cannot establish whether the investor borrowed externally; committee evidence is required.",
+            "status": "NOT TESTABLE"
+          },
+          "calendar_year_loss": {
+            "reason": "S9 lacks a risk measure, test method, and breach procedure.",
+            "status": "NOT TESTABLE"
+          },
+          "derivatives": {
+            "reason": "All selected Lab 13 holdings are labeled non-derivative.",
+            "status": "PASS"
+          },
+          "issuer": {
+            "reason": "Acme stock plus bonds = 0.0%; maximum is 8.0%.",
+            "status": "PASS"
+          },
+          "liquidity": {
+            "reason": "100.0% redeemable within 5 business days versus 90.0% required.",
+            "status": "PASS"
+          },
+          "long_only": {
+            "reason": "Lowest weight is 0.0%; no short sales.",
+            "status": "PASS"
+          },
+          "reserve": {
+            "reason": "14.0% reserve-eligible versus 3.0% required for four $0.75m distributions on $100m.",
+            "status": "PASS"
+          },
+          "turnover": {
+            "reason": "No prior approved portfolio was supplied.",
+            "status": "NOT TESTABLE"
+          },
+          "weights_sum": {
+            "reason": "100.0%; mandate requires 100.0%.",
+            "status": "PASS"
+          }
+        },
+        "name": "Shorter historical-window stress",
+        "planning_metrics": {
+          "gross_expected_return": 0.0667,
+          "reason": "Course planning inputs; Cash is proxied by Treasury bills. Net objective cannot be assessed because no cost input is supplied.",
+          "status": "PLANNING ESTIMATE",
+          "volatility": 0.10148
+        },
+        "selection_reason": "Candidate A selected after a positive BAA change; D remains an alternative coded-rule pass, not a suitability conclusion.",
+        "signal": {
+          "change_bps": 15.0,
+          "decision_date": "2026-10-02",
+          "first_observation": "2026-08-01",
+          "first_yield_percent": 6.32,
+          "latest_observation": "2026-09-01",
+          "latest_yield_percent": 6.47,
+          "state": "credit-yield tightening"
+        },
+        "weights": {
+          "Acme Corp bonds": 0.0,
+          "Acme Corp stock": 0.0,
+          "Cash": 0.02,
+          "Global equity index fund": 0.6,
+          "Investment-grade bond fund": 0.26,
+          "Private real estate fund": 0.0,
+          "Treasury 10-year note": 0.1,
+          "Treasury bills": 0.02
+        }
+      },
+      "weight_change": {
+        "Acme Corp bonds": 0.0,
+        "Acme Corp stock": 0.0,
+        "Cash": 0.0,
+        "Global equity index fund": 0.0,
+        "Investment-grade bond fund": 0.0,
+        "Private real estate fund": 0.0,
+        "Treasury 10-year note": 0.0,
+        "Treasury bills": 0.0
+      }
+    },
+    {
+      "base": {
+        "mandate_checks": {
+          "borrowing": {
+            "reason": "Portfolio weights cannot establish whether the investor borrowed externally; committee evidence is required.",
+            "status": "NOT TESTABLE"
+          },
+          "calendar_year_loss": {
+            "reason": "S9 lacks a risk measure, test method, and breach procedure.",
+            "status": "NOT TESTABLE"
+          },
+          "derivatives": {
+            "reason": "All selected Lab 13 holdings are labeled non-derivative.",
+            "status": "PASS"
+          },
+          "issuer": {
+            "reason": "Acme stock plus bonds = 0.0%; maximum is 8.0%.",
+            "status": "PASS"
+          },
+          "liquidity": {
+            "reason": "100.0% redeemable within 5 business days versus 90.0% required.",
+            "status": "PASS"
+          },
+          "long_only": {
+            "reason": "Lowest weight is 0.0%; no short sales.",
+            "status": "PASS"
+          },
+          "reserve": {
+            "reason": "14.0% reserve-eligible versus 3.0% required for four $0.75m distributions on $100m.",
+            "status": "PASS"
+          },
+          "turnover": {
+            "reason": "No prior approved portfolio was supplied.",
+            "status": "NOT TESTABLE"
+          },
+          "weights_sum": {
+            "reason": "100.0%; mandate requires 100.0%.",
+            "status": "PASS"
+          }
+        },
+        "name": "Approved base constrained portfolio",
+        "planning_metrics": {
+          "gross_expected_return": 0.0667,
+          "reason": "Course planning inputs; Cash is proxied by Treasury bills. Net objective cannot be assessed because no cost input is supplied.",
+          "status": "PLANNING ESTIMATE",
+          "volatility": 0.10148
+        },
+        "weights": {
+          "Acme Corp bonds": 0.0,
+          "Acme Corp stock": 0.0,
+          "Cash": 0.02,
+          "Global equity index fund": 0.6,
+          "Investment-grade bond fund": 0.26,
+          "Private real estate fund": 0.0,
+          "Treasury 10-year note": 0.1,
+          "Treasury bills": 0.02
+        }
+      },
+      "description": "Apply the course's 10-bps one-way training input as a feasibility probe only. The engine does not manufacture a net deduction without valid portfolio turnover and cost evidence.",
+      "mandate_base": {
+        "FAIL": [],
+        "NOT TESTABLE": [
+          "borrowing",
+          "turnover",
+          "calendar_year_loss"
+        ],
+        "PASS": [
+          "weights_sum",
+          "long_only",
+          "reserve",
+          "liquidity",
+          "issuer",
+          "derivatives"
+        ]
+      },
+      "mandate_stressed": {
+        "FAIL": [],
+        "NOT TESTABLE": [
+          "borrowing",
+          "turnover",
+          "calendar_year_loss"
+        ],
+        "PASS": [
+          "weights_sum",
+          "long_only",
+          "reserve",
+          "liquidity",
+          "issuer",
+          "derivatives"
+        ]
+      },
+      "name": "Transaction-cost feasibility",
+      "stop_condition": null,
+      "stressed": {
+        "cost_assessment": {
+          "input_one_way_bps": 10,
+          "reason": "The course input is a signal-development training cost, not a sourced portfolio trading cost; prior approved weights are also absent. No net-return deduction is calculated.",
+          "source": "lessons/week-11/starter/signal_development.csv",
+          "status": "INFEASIBLE"
+        },
+        "mandate_checks": {
+          "borrowing": {
+            "reason": "Portfolio weights cannot establish whether the investor borrowed externally; committee evidence is required.",
+            "status": "NOT TESTABLE"
+          },
+          "calendar_year_loss": {
+            "reason": "S9 lacks a risk measure, test method, and breach procedure.",
+            "status": "NOT TESTABLE"
+          },
+          "derivatives": {
+            "reason": "All selected Lab 13 holdings are labeled non-derivative.",
+            "status": "PASS"
+          },
+          "issuer": {
+            "reason": "Acme stock plus bonds = 0.0%; maximum is 8.0%.",
+            "status": "PASS"
+          },
+          "liquidity": {
+            "reason": "100.0% redeemable within 5 business days versus 90.0% required.",
+            "status": "PASS"
+          },
+          "long_only": {
+            "reason": "Lowest weight is 0.0%; no short sales.",
+            "status": "PASS"
+          },
+          "reserve": {
+            "reason": "14.0% reserve-eligible versus 3.0% required for four $0.75m distributions on $100m.",
+            "status": "PASS"
+          },
+          "turnover": {
+            "reason": "No prior approved portfolio was supplied.",
+            "status": "NOT TESTABLE"
+          },
+          "weights_sum": {
+            "reason": "100.0%; mandate requires 100.0%.",
+            "status": "PASS"
+          }
+        },
+        "name": "Transaction-cost stress",
+        "planning_metrics": {
+          "gross_expected_return": 0.0667,
+          "reason": "Course planning inputs; Cash is proxied by Treasury bills. Net objective cannot be assessed because no cost input is supplied.",
+          "status": "PLANNING ESTIMATE",
+          "volatility": 0.10148
+        },
+        "weights": {
+          "Acme Corp bonds": 0.0,
+          "Acme Corp stock": 0.0,
+          "Cash": 0.02,
+          "Global equity index fund": 0.6,
+          "Investment-grade bond fund": 0.26,
+          "Private real estate fund": 0.0,
+          "Treasury 10-year note": 0.1,
+          "Treasury bills": 0.02
+        }
+      },
+      "weight_change": {
+        "Acme Corp bonds": 0.0,
+        "Acme Corp stock": 0.0,
+        "Cash": 0.0,
+        "Global equity index fund": 0.0,
+        "Investment-grade bond fund": 0.0,
+        "Private real estate fund": 0.0,
+        "Treasury 10-year note": 0.0,
+        "Treasury bills": 0.0
+      }
+    },
+    {
+      "base": {
+        "mandate_checks": {
+          "borrowing": {
+            "reason": "Portfolio weights cannot establish whether the investor borrowed externally; committee evidence is required.",
+            "status": "NOT TESTABLE"
+          },
+          "calendar_year_loss": {
+            "reason": "S9 lacks a risk measure, test method, and breach procedure.",
+            "status": "NOT TESTABLE"
+          },
+          "derivatives": {
+            "reason": "All selected Lab 13 holdings are labeled non-derivative.",
+            "status": "PASS"
+          },
+          "issuer": {
+            "reason": "Acme stock plus bonds = 0.0%; maximum is 8.0%.",
+            "status": "PASS"
+          },
+          "liquidity": {
+            "reason": "100.0% redeemable within 5 business days versus 90.0% required.",
+            "status": "PASS"
+          },
+          "long_only": {
+            "reason": "Lowest weight is 0.0%; no short sales.",
+            "status": "PASS"
+          },
+          "reserve": {
+            "reason": "14.0% reserve-eligible versus 3.0% required for four $0.75m distributions on $100m.",
+            "status": "PASS"
+          },
+          "turnover": {
+            "reason": "No prior approved portfolio was supplied.",
+            "status": "NOT TESTABLE"
+          },
+          "weights_sum": {
+            "reason": "100.0%; mandate requires 100.0%.",
+            "status": "PASS"
+          }
+        },
+        "name": "Approved base constrained portfolio",
+        "planning_metrics": {
+          "gross_expected_return": 0.0667,
+          "reason": "Course planning inputs; Cash is proxied by Treasury bills. Net objective cannot be assessed because no cost input is supplied.",
+          "status": "PLANNING ESTIMATE",
+          "volatility": 0.10148
+        },
+        "weights": {
+          "Acme Corp bonds": 0.0,
+          "Acme Corp stock": 0.0,
+          "Cash": 0.02,
+          "Global equity index fund": 0.6,
+          "Investment-grade bond fund": 0.26,
+          "Private real estate fund": 0.0,
+          "Treasury 10-year note": 0.1,
+          "Treasury bills": 0.02
+        }
+      },
+      "description": "Require every mandatory mandate rule to be scorable as well as passing. This adds no invented numerical constraint.",
+      "mandate_base": {
+        "FAIL": [],
+        "NOT TESTABLE": [
+          "borrowing",
+          "turnover",
+          "calendar_year_loss"
+        ],
+        "PASS": [
+          "weights_sum",
+          "long_only",
+          "reserve",
+          "liquidity",
+          "issuer",
+          "derivatives"
+        ]
+      },
+      "mandate_stressed": {
+        "FAIL": [],
+        "NOT TESTABLE": [
+          "borrowing",
+          "turnover",
+          "calendar_year_loss"
+        ],
+        "PASS": [
+          "weights_sum",
+          "long_only",
+          "reserve",
+          "liquidity",
+          "issuer",
+          "derivatives"
+        ]
+      },
+      "name": "Constraint completeness",
+      "stop_condition": {
+        "condition": "Stop implementation whenever any mandatory mandate rule is FAIL or NOT TESTABLE.",
+        "reason": "The mandate requires compliance before adoption. Current base output has NOT TESTABLE borrowing, turnover, and S9 calendar-year-loss checks; S4 and S10 remain unresolved committee decisions.",
+        "status": "STOP"
+      },
+      "stressed": {
+        "mandate_checks": {
+          "borrowing": {
+            "reason": "Portfolio weights cannot establish whether the investor borrowed externally; committee evidence is required.",
+            "status": "NOT TESTABLE"
+          },
+          "calendar_year_loss": {
+            "reason": "S9 lacks a risk measure, test method, and breach procedure.",
+            "status": "NOT TESTABLE"
+          },
+          "derivatives": {
+            "reason": "All selected Lab 13 holdings are labeled non-derivative.",
+            "status": "PASS"
+          },
+          "issuer": {
+            "reason": "Acme stock plus bonds = 0.0%; maximum is 8.0%.",
+            "status": "PASS"
+          },
+          "liquidity": {
+            "reason": "100.0% redeemable within 5 business days versus 90.0% required.",
+            "status": "PASS"
+          },
+          "long_only": {
+            "reason": "Lowest weight is 0.0%; no short sales.",
+            "status": "PASS"
+          },
+          "reserve": {
+            "reason": "14.0% reserve-eligible versus 3.0% required for four $0.75m distributions on $100m.",
+            "status": "PASS"
+          },
+          "turnover": {
+            "reason": "No prior approved portfolio was supplied.",
+            "status": "NOT TESTABLE"
+          },
+          "weights_sum": {
+            "reason": "100.0%; mandate requires 100.0%.",
+            "status": "PASS"
+          }
+        },
+        "name": "Constraint-completeness stress",
+        "planning_metrics": {
+          "gross_expected_return": 0.0667,
+          "reason": "Course planning inputs; Cash is proxied by Treasury bills. Net objective cannot be assessed because no cost input is supplied.",
+          "status": "PLANNING ESTIMATE",
+          "volatility": 0.10148
+        },
+        "weights": {
+          "Acme Corp bonds": 0.0,
+          "Acme Corp stock": 0.0,
+          "Cash": 0.02,
+          "Global equity index fund": 0.6,
+          "Investment-grade bond fund": 0.26,
+          "Private real estate fund": 0.0,
+          "Treasury 10-year note": 0.1,
+          "Treasury bills": 0.02
+        }
+      },
+      "weight_change": {
+        "Acme Corp bonds": 0.0,
+        "Acme Corp stock": 0.0,
+        "Cash": 0.0,
+        "Global equity index fund": 0.0,
+        "Investment-grade bond fund": 0.0,
+        "Private real estate fund": 0.0,
+        "Treasury 10-year note": 0.0,
+        "Treasury bills": 0.0
+      }
+    }
+  ]
+}

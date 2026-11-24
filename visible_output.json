@@ -1,0 +1,271 @@
+{
+  "as_of": "2026-10-02",
+  "benchmark_comparison": {
+    "constrained_minus_benchmark_gross_expected_return": -0.0013,
+    "interpretation": "Planning estimate only; no net-of-cost conclusion."
+  },
+  "disclosures": {
+    "advice": "Education only, not investment advice.",
+    "ai_use": "AI was used to assist implementation and testing; the analysis and decision remain the student's responsibility."
+  },
+  "limitations": [
+    "No sourced costs: CPI + 4% net-of-cost objective is not assessed.",
+    "S9 calendar-year loss and turnover cannot be fully tested from supplied inputs.",
+    "No historical total-return series was supplied; this is not a backtest.",
+    "Private real estate and Acme holdings lack course return/risk estimates, so equal-weight risk/return is not assessed."
+  ],
+  "mandate_terms": {
+    "horizon": "Seven-year horizon.",
+    "rebalance_frequency": "Annual rebalancing.",
+    "return_objective": {
+      "reason": "No CPI series or sourced portfolio trading-cost input was supplied; the net-of-cost objective cannot be tested.",
+      "statement": "CPI + 4% net of costs over rolling five-year periods.",
+      "status": "NOT TESTABLE"
+    },
+    "source": "Lab 13 mandate S1 and S2 (lab-13.md)."
+  },
+  "portfolios": [
+    {
+      "mandate_checks": {
+        "borrowing": {
+          "reason": "Portfolio weights cannot establish whether the investor borrowed externally; committee evidence is required.",
+          "status": "NOT TESTABLE"
+        },
+        "calendar_year_loss": {
+          "reason": "S9 lacks a risk measure, test method, and breach procedure.",
+          "status": "NOT TESTABLE"
+        },
+        "derivatives": {
+          "reason": "All selected Lab 13 holdings are labeled non-derivative.",
+          "status": "PASS"
+        },
+        "issuer": {
+          "reason": "Acme stock plus bonds = 25.0%; maximum is 8.0%.",
+          "status": "FAIL"
+        },
+        "liquidity": {
+          "reason": "87.5% redeemable within 5 business days versus 90.0% required.",
+          "status": "FAIL"
+        },
+        "long_only": {
+          "reason": "Lowest weight is 12.5%; no short sales.",
+          "status": "PASS"
+        },
+        "reserve": {
+          "reason": "37.5% reserve-eligible versus 3.0% required for four $0.75m distributions on $100m.",
+          "status": "PASS"
+        },
+        "turnover": {
+          "reason": "No prior approved portfolio was supplied.",
+          "status": "NOT TESTABLE"
+        },
+        "weights_sum": {
+          "reason": "100.0%; mandate requires 100.0%.",
+          "status": "PASS"
+        }
+      },
+      "name": "Equal-weight baseline",
+      "planning_metrics": {
+        "gross_expected_return": null,
+        "reason": "No course return/risk estimate for: Private real estate fund, Acme Corp bonds, Acme Corp stock.",
+        "status": "NOT ASSESSED",
+        "volatility": null
+      },
+      "weights": {
+        "Acme Corp bonds": 0.125,
+        "Acme Corp stock": 0.125,
+        "Cash": 0.125,
+        "Global equity index fund": 0.125,
+        "Investment-grade bond fund": 0.125,
+        "Private real estate fund": 0.125,
+        "Treasury 10-year note": 0.125,
+        "Treasury bills": 0.125
+      }
+    },
+    {
+      "mandate_checks": {
+        "borrowing": {
+          "reason": "Portfolio weights cannot establish whether the investor borrowed externally; committee evidence is required.",
+          "status": "NOT TESTABLE"
+        },
+        "calendar_year_loss": {
+          "reason": "S9 lacks a risk measure, test method, and breach procedure.",
+          "status": "NOT TESTABLE"
+        },
+        "derivatives": {
+          "reason": "All selected Lab 13 holdings are labeled non-derivative.",
+          "status": "PASS"
+        },
+        "issuer": {
+          "reason": "Acme stock plus bonds = 0.0%; maximum is 8.0%.",
+          "status": "PASS"
+        },
+        "liquidity": {
+          "reason": "100.0% redeemable within 5 business days versus 90.0% required.",
+          "status": "PASS"
+        },
+        "long_only": {
+          "reason": "Lowest weight is 0.0%; no short sales.",
+          "status": "PASS"
+        },
+        "reserve": {
+          "reason": "0.0% reserve-eligible versus 3.0% required for four $0.75m distributions on $100m.",
+          "status": "FAIL"
+        },
+        "turnover": {
+          "reason": "No prior approved portfolio was supplied.",
+          "status": "NOT TESTABLE"
+        },
+        "weights_sum": {
+          "reason": "100.0%; mandate requires 100.0%.",
+          "status": "PASS"
+        }
+      },
+      "name": "60/40 comparison benchmark",
+      "planning_metrics": {
+        "gross_expected_return": 0.068,
+        "reason": "Course planning inputs; Cash is proxied by Treasury bills. Net objective cannot be assessed because no cost input is supplied.",
+        "status": "PLANNING ESTIMATE",
+        "volatility": 0.104614
+      },
+      "weights": {
+        "Acme Corp bonds": 0.0,
+        "Acme Corp stock": 0.0,
+        "Cash": 0.0,
+        "Global equity index fund": 0.6,
+        "Investment-grade bond fund": 0.4,
+        "Private real estate fund": 0.0,
+        "Treasury 10-year note": 0.0,
+        "Treasury bills": 0.0
+      }
+    },
+    {
+      "mandate_checks": {
+        "borrowing": {
+          "reason": "Portfolio weights cannot establish whether the investor borrowed externally; committee evidence is required.",
+          "status": "NOT TESTABLE"
+        },
+        "calendar_year_loss": {
+          "reason": "S9 lacks a risk measure, test method, and breach procedure.",
+          "status": "NOT TESTABLE"
+        },
+        "derivatives": {
+          "reason": "All selected Lab 13 holdings are labeled non-derivative.",
+          "status": "PASS"
+        },
+        "issuer": {
+          "reason": "Acme stock plus bonds = 0.0%; maximum is 8.0%.",
+          "status": "PASS"
+        },
+        "liquidity": {
+          "reason": "100.0% redeemable within 5 business days versus 90.0% required.",
+          "status": "PASS"
+        },
+        "long_only": {
+          "reason": "Lowest weight is 0.0%; no short sales.",
+          "status": "PASS"
+        },
+        "reserve": {
+          "reason": "14.0% reserve-eligible versus 3.0% required for four $0.75m distributions on $100m.",
+          "status": "PASS"
+        },
+        "turnover": {
+          "reason": "No prior approved portfolio was supplied.",
+          "status": "NOT TESTABLE"
+        },
+        "weights_sum": {
+          "reason": "100.0%; mandate requires 100.0%.",
+          "status": "PASS"
+        }
+      },
+      "name": "Signal-selected constrained portfolio",
+      "planning_metrics": {
+        "gross_expected_return": 0.0667,
+        "reason": "Course planning inputs; Cash is proxied by Treasury bills. Net objective cannot be assessed because no cost input is supplied.",
+        "status": "PLANNING ESTIMATE",
+        "volatility": 0.10148
+      },
+      "weights": {
+        "Acme Corp bonds": 0.0,
+        "Acme Corp stock": 0.0,
+        "Cash": 0.02,
+        "Global equity index fund": 0.6,
+        "Investment-grade bond fund": 0.26,
+        "Private real estate fund": 0.0,
+        "Treasury 10-year note": 0.1,
+        "Treasury bills": 0.02
+      }
+    }
+  ],
+  "scorability": {
+    "S10_optimization": {
+      "reason": "Optimization target and sector, ESG, tax, and home-bias preferences are missing.",
+      "status": "UNRESOLVED"
+    },
+    "S4_benchmark_role": {
+      "reason": "The 60/40 mix is treated as a comparison benchmark. The CIO has not said whether it is the intended strategic allocation.",
+      "status": "UNRESOLVED"
+    },
+    "S9_loss_limit": {
+      "reason": "No risk measure, test method, probability/window, or breach procedure was supplied.",
+      "status": "UNRESOLVED"
+    },
+    "costs": {
+      "reason": "No sourced trading-cost input; CPI + 4% net-of-cost cannot be tested.",
+      "status": "NOT ASSESSED"
+    },
+    "turnover": {
+      "reason": "No prior approved weights were supplied; annual turnover cannot be calculated.",
+      "status": "NOT TESTABLE"
+    }
+  },
+  "selection_reason": "Candidate A selected after a positive BAA change; D remains an alternative coded-rule pass, not a suitability conclusion.",
+  "signal": {
+    "change_bps": 28.0,
+    "decision_date": "2026-10-02",
+    "first_observation": "2026-07-01",
+    "first_yield_percent": 6.19,
+    "latest_observation": "2026-09-01",
+    "latest_yield_percent": 6.47,
+    "state": "credit-yield tightening"
+  },
+  "signal_data_card": {
+    "costs": "No sourced trading-cost input exists; the net-of-cost objective is unscorable.",
+    "formula": "(latest usable BAA yield - earliest usable BAA yield) \u00d7 100 basis points",
+    "lookahead_survivorship_risks": "Current FRED history may contain later observations or revisions; retrieve ALFRED at each future decision date. This macro series does not establish a survivorship-free security universe.",
+    "missing_data_rule": "Stop if fewer than two usable observations exist, a date/value is invalid, a yield is nonpositive, or availability precedes observation date.",
+    "model_result": "28.0 bps: credit-yield tightening.",
+    "observations": [
+      {
+        "available_on": "2026-10-01",
+        "observation_date": "2026-07-01",
+        "value_percent": 6.19
+      },
+      {
+        "available_on": "2026-10-01",
+        "observation_date": "2026-08-01",
+        "value_percent": 6.32
+      },
+      {
+        "available_on": "2026-10-01",
+        "observation_date": "2026-09-01",
+        "value_percent": 6.47
+      }
+    ],
+    "provider": "FRED series BAA; source shown by FRED is Moody's. Historical information set: ALFRED vintage rule.",
+    "rebalance_timing": "Annual mandate rebalancing. The stored initial decision is 2026-10-02, the next decision day after the documented 2026-10-01 September release.",
+    "transformations": "No imputation or forward fill. Values remain percentage points until the basis-point subtraction.",
+    "units_frequency": "Percent, not seasonally adjusted; monthly.",
+    "universe": "The eight Lab 13 holdings. The signal selects between existing Candidates A and D; it does not create securities."
+  },
+  "source_facts": {
+    "return_risk_source": "course portfolio.py",
+    "signal_source": "course BAA data card and documented observations",
+    "universe_source": "Lab 13 mandate.py"
+  },
+  "student_judgments": {
+    "benchmark_role": "Comparison benchmark only; not an allocation constraint.",
+    "cash_proxy": "Cash is mapped to the course Treasury-bill planning estimate only for A's planning metrics.",
+    "signal_rule": "If the as-of BAA change is positive, select Candidate A; otherwise select Candidate D."
+  }
+}

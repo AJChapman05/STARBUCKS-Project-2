@@ -1,0 +1,33 @@
+CHANGED-CASE EXECUTION AND TEST RESULT
+
+Approved changed input:
+  BAA signal window: 3 usable monthly observations -> latest 2 usable monthly observations
+
+Initial execution attempt:
+  .venv/bin/python evidence/changed-input-record/run_two_observation_changed_case.py
+  Result: ModuleNotFoundError: No module named 'analysis'
+  Disposition: No changed portfolio output was produced. The evidence runner was corrected only to add the Project 2 root to sys.path; no model input, data, holding, return assumption, constraint, or baseline configuration changed.
+
+Successful execution commands:
+  .venv/bin/python evidence/changed-input-record/run_two_observation_changed_case.py
+  .venv/bin/python -m pytest -q
+
+Successful execution result:
+  Wrote evidence/changed-input-record/changed-two-observation-output.json
+  Changed-case checks: +15.0 bps; Candidate A selected; baseline configuration untouched.
+  10 passed in 0.70s
+
+Comparison checks:
+  Baseline signal: +28.0 bps
+  Changed signal: +15.0 bps
+  Candidate A weights: unchanged
+  Candidate A planning metrics: unchanged
+  Candidate A mandate checks: unchanged
+  Constrained-versus-benchmark comparison: unchanged
+  Decision: unchanged (reject/0%)
+
+Restoration verification:
+  cmp -s visible_output.json evidence/changed-input-record/baseline-visible_output.json
+  Result: identical
+  cmp -s stress_output.json evidence/changed-input-record/baseline-stress_output.json
+  Result: identical
