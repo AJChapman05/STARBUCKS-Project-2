@@ -1,6 +1,6 @@
 # Validation and AI Use
 
-**AI use:** I used OpenAI Codex to assist with implementation, testing, stress analysis, and draft documentation. The Locked Changed-Input Record uses an **AI-assisted pre-run prediction, prepared with Codex under the instructor's in-class permission**; that permission was given verbally in class.
+**AI use:** I used OpenAI Codex to assist with implementation, testing, stress analysis, and draft documentation.
 
 **Ownership and purpose:** The analysis and decision are mine. This work is educational and is not investment advice.
 
